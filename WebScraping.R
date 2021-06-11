@@ -71,7 +71,7 @@ for (URL in pagesURL)  {
         productLocation <- html_text(productLocation)
         print(productLocation)
         
-        if (productLocation[1] == "¡Es uno de los mejores del sitio!" | length(productLocation) == 0) {
+        if (productLocation[1] == "Â¡Es uno de los mejores del sitio!" | length(productLocation) == 0) {
           DataProducts.Location <- c(DataProducts.Location, "Desconocido")
         } else {
           DataProducts.Location <- c(DataProducts.Location, productLocation[1])
@@ -96,7 +96,7 @@ productos <- data.frame(
   modelo = DataProducts.Model,
   precio = DataProducts.Price,
   vendidos = DataProducts.Sold,
-  ubicación = DataProducts.Location,
+  ubicacion = DataProducts.Location,
   total_ventas = DataProducts.TotalSales
 )
 
